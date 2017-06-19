@@ -10,6 +10,7 @@ export class MemoryActions {
     static ADD_OPERATOR = 'ADD_OPERATOR';
     static ADD_DOT = 'ADD_DOT';
     static SQRT = 'SQRT';
+    static PERCENTAGE = 'PERCENTAGE';
     static DIVISION_ONE = 'DIVISION_ONE';
     static EQUAL = 'EQUAL';
 
@@ -28,6 +29,12 @@ export class MemoryActions {
     sqrt(): Action {
         return {
             type: MemoryActions.SQRT,
+            payload: null
+        };
+    }
+    percentage(): Action {
+        return {
+            type: MemoryActions.PERCENTAGE,
             payload: null
         };
     }

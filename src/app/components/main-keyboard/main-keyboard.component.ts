@@ -40,6 +40,9 @@ export class MainKeyboardComponent {
     sqrt() {
         this.ngRedux.dispatch(this.actions.sqrt()); // <- New
     }
+    percentage() {
+        this.ngRedux.dispatch(this.actions.percentage()); // <- New
+    }
 
     divisionOne() {
         this.ngRedux.dispatch(this.actions.divisionOne()); // <- New
