@@ -7,8 +7,10 @@ export class MemoryActions {
     static CLEAR = 'CLEAR';
     static BACKSPACE = 'BACKSPACE';
     static ADD_SYMBOL = 'ADD_SYMBOL';
+    static ADD_OPERATOR = 'ADD_OPERATOR';
     static ADD_DOT = 'ADD_DOT';
     static SQRT = 'SQRT';
+    static DIVISION_ONE = 'DIVISION_ONE';
     static EQUAL = 'EQUAL';
 
     clear(): Action {
@@ -29,6 +31,12 @@ export class MemoryActions {
             payload: null
         };
     }
+    divisionOne(): Action {
+        return {
+            type: MemoryActions.DIVISION_ONE,
+            payload: null
+        };
+    }
     equal(): Action {
         return {
             type: MemoryActions.EQUAL,
@@ -38,6 +46,12 @@ export class MemoryActions {
     addSymbol(symbol): Action {
         return {
             type: MemoryActions.ADD_SYMBOL,
+            payload: symbol
+        };
+    }
+    addOperator(symbol): Action {
+        return {
+            type: MemoryActions.ADD_OPERATOR,
             payload: symbol
         };
     }

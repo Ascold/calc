@@ -29,12 +29,20 @@ export class MainKeyboardComponent {
         this.ngRedux.dispatch(this.actions.addSymbol(symbol)); // <- New
     }
 
+    addOperator(symbol) {
+        this.ngRedux.dispatch(this.actions.addOperator(symbol)); // <- New
+    }
+
     addDot(dot) {
         this.ngRedux.dispatch(this.actions.addDot(dot)); // <- New
     }
 
     sqrt() {
         this.ngRedux.dispatch(this.actions.sqrt()); // <- New
+    }
+
+    divisionOne() {
+        this.ngRedux.dispatch(this.actions.divisionOne()); // <- New
     }
 
     equal() {
