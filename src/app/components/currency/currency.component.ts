@@ -8,7 +8,7 @@ import {GetCurrencyService} from '../../services/get-currency.service';
 })
 export class CurrencyComponent implements OnInit {
 
-    private exchangeRates;
+    public exchangeRates;
 
     constructor(private GetCurrencyService: GetCurrencyService) {
     }

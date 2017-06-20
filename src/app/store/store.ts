@@ -57,7 +57,7 @@ export function rootReducer(lastState: MemoryState, Action: Action): MemoryState
         case MemoryActions.PLUS_MINUS:
             let firstSymbol = lastState.memory.split(' ')[0];
             if (firstSymbol.match(/-/)) {
-                return {memory: firstSymbol.charAt(1) + ' ' + String(lastState.memory.split(' ').slice(1).join(' '))};
+                return {memory: firstSymbol.slice(1) + ' ' + String(lastState.memory.split(' ').slice(1).join(' '))};
             } else {
                 return {memory: '-' + lastState.memory};
             }
