@@ -35,9 +35,6 @@ import { AdditionalEngKeyboardComponent } from './components/additional-eng-keyb
 })
 export class AppModule {
     constructor(ngRedux: NgRedux<MemoryState>) {
-        // Tell @angular-redux/store about our rootReducer and our initial state.
-        // It will use this to create a redux store for us and wire up all the
-        // events.
         ngRedux.configureStore(
             rootReducer,
             INITIAL_STATE);

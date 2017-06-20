@@ -1,30 +1,34 @@
-<div class="col-lg-6 main-keyboard-wrapper">
-    <div class="btn btn-default btn-sm num-button">MC</div>
-    <div class="btn btn-default btn-sm num-button">MR</div>
-    <div class="btn btn-default btn-sm num-button">MS</div>
-    <div class="btn btn-default btn-sm num-button">M+</div>
-    <div class="btn btn-default btn-sm num-button">M-</div>
+<div class="col-lg-8 main-keyboard-wrapper">
     <div class="btn btn-default btn-sm num-button glyphicon glyphicon-arrow-left" (click)="backspace()"></div>
-    <div class="btn btn-default btn-sm num-button" (click)="clear()">CE</div>
-    <div class="btn btn-default btn-sm num-button" (click)="clear()">C</div>
-    <div class="btn btn-default btn-sm num-button">&plusmn;</div>
-    <div class="btn btn-default btn-sm num-button" (click)="sqrt()">&radic;</div>
+    <div class="btn btn-default btn-sm num-button" (click)="executeMC()">MC</div>
+    <div class="btn btn-default btn-sm num-button" (click)="executeMR()">MR</div>
+    <div class="btn btn-default btn-sm num-button" (click)="executeMS()">MS</div>
+    <div class="btn btn-default btn-sm num-button" (click)="executeMPlus()">M+</div>
+    <div class="btn btn-default btn-sm num-button" (click)="executeMMinus()">M-</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(7)">7</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(8)">8</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(9)">9</div>
     <div class="btn btn-default btn-sm num-button" (click)="addOperator('/')">/</div>
-    <div class="btn btn-default btn-sm num-button" (click)="percentage()">%</div>
+
+    <div class="btn btn-default btn-sm num-button" (click)="clear()">CE</div>
+    <div class="btn btn-default btn-sm num-button" (click)="clear()">C</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(4)">4</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(5)">5</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(6)">6</div>
     <div class="btn btn-default btn-sm num-button" (click)="addOperator('*')">*</div>
-    <div class="btn btn-default btn-sm num-button" (click)="divisionOne()">1/x</div>
+
+    <div class="btn btn-default btn-sm num-button" (click)="plusMinus()">&plusmn;</div>
+
+    <div class="btn btn-default btn-sm num-button" (click)="sqrt()">&radic;</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(1)">1</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(2)">2</div>
     <div class="btn btn-default btn-sm num-button" (click)="addSymbol(3)">3</div>
     <div class="btn btn-default btn-sm num-button" (click)="addOperator('-')">-</div>
-    <div class="btn btn-default btn-sm num-button double-vertical" (click)="equal()">=</div>
+    <div class="btn btn-default btn-sm num-button" (click)="percentage()">%</div>
+
+    <div class="btn btn-default btn-sm num-button" (click)="divisionOne()">1/x</div>
     <div class="btn btn-default btn-sm num-button double-gorizontal" (click)="addSymbol(0)">0</div>
     <div class="btn btn-default btn-sm num-button" (click)="addDot('.')">.</div>
     <div class="btn btn-default btn-sm num-button" (click)="addOperator('+')">+</div>
+    <div class="btn btn-default btn-sm num-button double-gorizontal" (click)="equal()">=</div>
 </div>

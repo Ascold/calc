@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import {MemoryActions} from '../../store/app.actions';
+import { Component} from '@angular/core';
 import {NgRedux} from '@angular-redux/store/lib/src';
 import {MemoryState} from '../../store/store';
 
@@ -11,16 +9,15 @@ import {MemoryState} from '../../store/store';
 })
 export class ScreenComponent  {
     memory: string;
-    subscription; // <- New;
+    subscription;
 
     constructor(
-        private ngRedux: NgRedux<MemoryState>,
-        private actions: MemoryActions) {
-        this.subscription = ngRedux.select<string>('memory') // <- New
-            .subscribe(newCount => this.memory = newCount);    // <- New
+        private ngRedux: NgRedux<MemoryState>) {
+        this.subscription = ngRedux.select<string>('memory')
+            .subscribe(newCount => this.memory = newCount);
     }
 
-    ngOnDestroy() {                    // <- New
-        this.subscription.unsubscribe(); // <- New
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
     }
 }
