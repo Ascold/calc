@@ -14,6 +14,6 @@ After that it is necessary to install AngularCLI project:
 
 To run the app:
 
-> ng serve5
+> ng serve
 
-App will run on default portt 4200.
+App will run on default port 4200.
