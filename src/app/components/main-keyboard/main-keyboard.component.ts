@@ -11,22 +11,26 @@ import {MemoryState} from '../../store/store';
 })
 export class MainKeyboardComponent {
 
-    constructor(
-        private ngRedux: NgRedux<MemoryState>,
-        private actions: MemoryActions) {}
+    constructor(private ngRedux: NgRedux<MemoryState>,
+                private actions: MemoryActions) {
+    }
 
     executeMC() {
         this.ngRedux.dispatch(this.actions.executeMC()); // <- New
     }
+
     executeMR() {
         this.ngRedux.dispatch(this.actions.executeMR());
     }
+
     executeMS() {
         this.ngRedux.dispatch(this.actions.executeMS());
     }
+
     executeMPlus() {
         this.ngRedux.dispatch(this.actions.executeMPlus());
     }
+
     executeMMinus() {
         this.ngRedux.dispatch(this.actions.executeMMinus());
     }

@@ -10,6 +10,10 @@ export const INITIAL_STATE: MemoryState = {
 };
 
 export function rootReducer(lastState: MemoryState, Action: Action): MemoryState {
+    function fact(n) {
+        return (n !== 1) ? n * fact(n - 1) : 1;
+    }
+
     switch (Action.type) {
         case MemoryActions.EXECUTE_MC:
             localStorage.setItem('memoryCalc', '');
@@ -36,7 +40,7 @@ export function rootReducer(lastState: MemoryState, Action: Action): MemoryState
             }
         case MemoryActions.EXECUTE_MMINUS:
             if (localStorage.getItem('memoryCalc')) {
-                let memoryMinus = String( Number(localStorage.getItem('memoryCalc')) - eval(lastState.memory));
+                let memoryMinus = String(Number(localStorage.getItem('memoryCalc')) - eval(lastState.memory));
                 localStorage.setItem('memoryCalc', memoryMinus);
                 return {memory: lastState.memory};
             } else {
@@ -94,6 +98,25 @@ export function rootReducer(lastState: MemoryState, Action: Action): MemoryState
             return {memory: String(1 / eval(lastState.memory))};
         case MemoryActions.EQUAL:
             return {memory: String(eval(lastState.memory))};
+        case MemoryActions.SQUARE:
+            let squareExpressionPart = eval(lastState.memory);
+            return {memory: String(squareExpressionPart * squareExpressionPart)};
+        case MemoryActions.CUBE:
+            let cubeExpressionPart = eval(lastState.memory);
+            return {memory: String(cubeExpressionPart * cubeExpressionPart * cubeExpressionPart)};
+        case MemoryActions.NATURAL_LOG:
+            return {memory: String(Math.log(eval(lastState.memory)))};
+        case MemoryActions.CBRT:
+            return {memory: String(Math.cbrt(eval(lastState.memory)))};
+        case MemoryActions.FACTORIAL:
+            let factorialResult = fact(eval(lastState.memory));
+            return {memory: String(factorialResult)};
+        case MemoryActions.SIN:
+            return {memory: String(Math.sin(eval(lastState.memory)))};
+        case MemoryActions.COS:
+            return {memory: String(Math.cos(eval(lastState.memory)))};
+        case MemoryActions.TAN:
+            return {memory: String(Math.tan(eval(lastState.memory)))};
     }
 
     return lastState;

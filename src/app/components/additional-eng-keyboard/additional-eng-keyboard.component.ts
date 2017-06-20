@@ -22,4 +22,36 @@ export class AdditionalEngKeyboardComponent {
         this.ngRedux.dispatch(this.actions.addPI());
     }
 
+    square() {
+        this.ngRedux.dispatch(this.actions.square());
+    }
+
+    cube() {
+        this.ngRedux.dispatch(this.actions.cube());
+    }
+
+    naturalLogarithm() {
+        this.ngRedux.dispatch(this.actions.naturalLogarithm());
+    }
+
+    cbrt() {
+        this.ngRedux.dispatch(this.actions.cbrt());
+    }
+
+    factorial() {
+        this.ngRedux.dispatch(this.actions.factorial());
+    }
+
+    sin() {
+        this.ngRedux.dispatch(this.actions.sin());
+    }
+
+    cos() {
+        this.ngRedux.dispatch(this.actions.cos());
+    }
+
+    tan() {
+        this.ngRedux.dispatch(this.actions.tan());
+    }
+
 }

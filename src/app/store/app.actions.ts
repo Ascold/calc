@@ -19,6 +19,14 @@ export class MemoryActions {
     static PERCENTAGE = 'PERCENTAGE';
     static DIVISION_ONE = 'DIVISION_ONE';
     static EQUAL = 'EQUAL';
+    static SQUARE = 'SQUARE';
+    static CUBE = 'CUBE';
+    static NATURAL_LOG = 'NATURAL_LOG';
+    static CBRT = 'CBRT';
+    static FACTORIAL = 'FACTORIAL';
+    static SIN = 'SIN';
+    static COS = 'COS';
+    static TAN = 'TAN';
 
 
     executeMC(): Action {
@@ -129,6 +137,62 @@ export class MemoryActions {
     addPI(): Action {
         return {
             type: MemoryActions.ADD_PI,
+            payload: null
+        };
+    }
+
+    square(): Action {
+        return {
+            type: MemoryActions.SQUARE,
+            payload: null
+        };
+    }
+
+    cube(): Action {
+        return {
+            type: MemoryActions.CUBE,
+            payload: null
+        };
+    }
+
+    naturalLogarithm(): Action {
+        return {
+            type: MemoryActions.NATURAL_LOG,
+            payload: null
+        };
+    }
+
+    cbrt(): Action {
+        return {
+            type: MemoryActions.CBRT,
+            payload: null
+        };
+    }
+
+    factorial(): Action {
+        return {
+            type: MemoryActions.FACTORIAL,
+            payload: null
+        };
+    }
+
+    sin(): Action {
+        return {
+            type: MemoryActions.SIN,
+            payload: null
+        };
+    }
+
+    cos(): Action {
+        return {
+            type: MemoryActions.COS,
+            payload: null
+        };
+    }
+
+    tan(): Action {
+        return {
+            type: MemoryActions.TAN,
             payload: null
         };
     }
